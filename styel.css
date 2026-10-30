@@ -1,0 +1,59 @@
+:root{
+  --rb:linear-gradient(90deg,#ff7eb3,#ffffff,#ff4d94,#ffffff,#ffb3d1);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:linear-gradient(135deg,#ffc2da,#ffffff,#ff9ec4,#ffffff,#ffd6e7) fixed;
+  color:#8a1f4d;
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+  text-align:center;
+  overflow-x:hidden;
+}
+body::before{content:"";display:block;height:10px;background:var(--rb)}
+
+.fall{position:fixed;top:-30px;font-size:22px;pointer-events:none;animation:f linear forwards;z-index:0}
+@keyframes f{to{transform:translateY(110vh) rotate(360deg)}}
+
+main{position:relative;z-index:1;max-width:560px;margin:0 auto;padding:24px 16px 60px}
+
+h1{font-size:1.8rem;margin:8px 0;color:#c2185b}
+
+.card{
+  color:#8a1f4d;
+  font-weight:600;
+  border:4px solid #fff;
+  background:linear-gradient(225deg,#ffb3d1,#ffffff,#ff8fbc,#ffffff,#ffc9de);
+  border-radius:20px;
+  padding:22px;
+  margin:18px 0;
+  box-shadow:0 4px 18px rgba(0,0,0,.08);
+}
+
+#quote{font-size:1.2rem;line-height:1.6;min-height:96px;display:flex;align-items:center;justify-content:center}
+
+button{
+  background:linear-gradient(90deg,#ff4d94,#ff8fbc);
+  text-shadow:0 1px 2px rgba(0,0,0,.3);
+  color:#fff;
+  border:2px solid #fff;
+  border-radius:999px;
+  padding:12px 22px;
+  font-size:1rem;
+  cursor:pointer;
+  margin:6px;
+}
+button.pink{background:linear-gradient(90deg,#ff8fbc,#e91e8c)}
+
+canvas{
+  width:100%;
+  max-width:360px;
+  height:auto;
+  background:linear-gradient(135deg,#ffe3ef,#ffffff,#ffc2da,#ffffff,#ffd6e7);
+  border-radius:14px;
+  touch-action:none;
+}
